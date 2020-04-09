@@ -22,6 +22,7 @@ export default class App extends Component {
     fileFormat: "xlsx",
   };
 
+  // Saving data array as csv
   saveToCsv = (dataArray) => {
     let csv = "";
     let data = dataArray;
@@ -47,6 +48,7 @@ export default class App extends Component {
     document.body.removeChild(element);
   };
 
+  // Saving data array as xlsx
   saveToXlsx = (dataArray) => {
     var ws = XLSX.utils.json_to_sheet(dataArray);
     var wb = XLSX.utils.book_new();
@@ -59,6 +61,7 @@ export default class App extends Component {
     );
   };
 
+  // Loading raw data from the API
   loadData = () => {
     let {
       baseUrl,
@@ -105,6 +108,7 @@ export default class App extends Component {
       });
   };
 
+  // Function to reset app
   resetParams = () => {
     this.setState({
       registeredOffice: "",
@@ -127,7 +131,7 @@ export default class App extends Component {
           centered
         >
           <Modal.Header closeButton>
-            <Modal.Title>FAQ</Modal.Title>
+            <Modal.Title>Kuvaus</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <strong>Mitä tämä työkalu tekee?</strong>
@@ -194,7 +198,7 @@ export default class App extends Component {
           </Modal.Body>
         </Modal>
 
-        <div className="d-flex align-items-center justify-content-center min-vh-100">
+        <div className="d-flex align-items-center justify-content-center min-vh-100 test">
           <div className="card" style={{ width: "30rem" }}>
             <h4 className="card-header">
               Yrityshaku
@@ -233,7 +237,9 @@ export default class App extends Component {
                         placeholder="esim. Lappeenranta"
                         value={this.state.registeredOffice}
                         onChange={(e) =>
-                          this.setState({ registeredOffice: e.target.value })
+                          this.setState({
+                            registeredOffice: e.target.value,
+                          })
                         }
                       ></input>
                     </div>

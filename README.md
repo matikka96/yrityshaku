@@ -2,15 +2,16 @@
 
 ![alt text](https://github.com/matikka96/yrityshaku/blob/master/public/screenshot.png?raw=true "Kuvankaappaus sovelluksesta")
 
-Työkalun tarkoituksena on hakea yrityksiä ja niiden tietoja toimialan ja maantieteellisen sijainnin perusteella. Hakutulos on ladattavissa CSV tai XLSX formaateissa. Sisältö haetaan [PRH](https://avoindata.prh.fi/index.html):n avoimen datan rajapinnasta.
+Työkalun tarkoituksena on hakea yrityksiä ja niiden tietoja toimialan ja maantieteellisen sijainnin perusteella. Hakutulos on ladattavissa CSV tai XLSX formaateissa. Sisältö haetaan [PRH](https://avoindata.prh.fi/index.html):n avoimen datan rajapinnasta. Voit esimerkiksi hakea kaikki televiestinnän yritykset alueelta Helsinki (toimialakoodi = 61 ja
+kotipaikka = Helsinki). [Tutustu demoon](https://yhaku.tikka.dev).
 
 ## Käyttöohjeet
 
 Haku voidaan suorittaa seuraavia parametreja hyödyntäen:
 
-* Kotipaikka Oltava tarkka vastine!
-* Toimiala _[lisätietoa](http://www.stat.fi/meta/luokitukset/toimiala/001-2008/index.html)_
-* Postinumero _[lisätietoa](https://fi.wikipedia.org/wiki/Luettelo_Suomen_postinumeroista_kunnittain)_
+- Kotipaikka _Oltava tarkka vastine!_
+- Toimiala _[lisätietoa](http://www.stat.fi/meta/luokitukset/toimiala/001-2008/index.html)_
+- Postinumero _[lisätietoa](https://fi.wikipedia.org/wiki/Luettelo_Suomen_postinumeroista_kunnittain)_
 
 Vähintään yksi parametri on syötettävä, mutta useampaakin voi käyttää samanaikaisesti. Jos parametri(t) on syötetty puutteellisesti, sovellus ilmoittaa asiasta.
 
@@ -21,4 +22,4 @@ Sovelluksen voi ajaa lokaalissa kehitysympäristössä. Toimiakseen se vaatii No
 1. `git clone https://github.com/matikka96/yrityshaku.git`
 2. `cd yrityshaku && npm install`
 3. `npm start`
-4. Siirry verkkoselaimessa osoitteeseen _http://localhost:3000/_
+4. Sovellus on nyt saatavilla osoitteesta _http://localhost:3000/_
