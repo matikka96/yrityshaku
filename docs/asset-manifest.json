@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/yrityshaku/static/js/main.f9b0941a.chunk.js",
+    "main.js.map": "/yrityshaku/static/js/main.f9b0941a.chunk.js.map",
+    "runtime-main.js": "/yrityshaku/static/js/runtime-main.8f6d6030.js",
+    "runtime-main.js.map": "/yrityshaku/static/js/runtime-main.8f6d6030.js.map",
+    "static/css/2.89f067aa.chunk.css": "/yrityshaku/static/css/2.89f067aa.chunk.css",
+    "static/js/2.4894e263.chunk.js": "/yrityshaku/static/js/2.4894e263.chunk.js",
+    "static/js/2.4894e263.chunk.js.map": "/yrityshaku/static/js/2.4894e263.chunk.js.map",
+    "index.html": "/yrityshaku/index.html",
+    "precache-manifest.075bc8eac6cd1f4f0354c2c909003463.js": "/yrityshaku/precache-manifest.075bc8eac6cd1f4f0354c2c909003463.js",
+    "service-worker.js": "/yrityshaku/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/yrityshaku/static/css/2.89f067aa.chunk.css.map",
+    "static/js/2.4894e263.chunk.js.LICENSE.txt": "/yrityshaku/static/js/2.4894e263.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f6d6030.js",
+    "static/css/2.89f067aa.chunk.css",
+    "static/js/2.4894e263.chunk.js",
+    "static/js/main.f9b0941a.chunk.js"
+  ]
+}
