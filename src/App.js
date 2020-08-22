@@ -184,7 +184,7 @@ export default class App extends Component {
               samanaikaisesti. Jos parametri(t) on syötetty puutteellisesti, sovellus
               ilmoittaa asiasta.
             </p>
-            <a href="https://tikka.dev" target="_blank" rel="noopener noreferrer">
+            <a href="https://matvei.xyz" target="_blank" rel="noopener noreferrer">
               Suunnittelu ja toteutus
             </a>
             <span> | </span>

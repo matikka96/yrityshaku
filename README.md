@@ -3,7 +3,7 @@
 ![alt text](https://github.com/matikka96/yrityshaku/blob/master/public/screenshot.png?raw=true "Kuvankaappaus sovelluksesta")
 
 Työkalun tarkoituksena on hakea yrityksiä ja niiden tietoja toimialan ja maantieteellisen sijainnin perusteella. Hakutulos on ladattavissa CSV tai XLSX formaateissa. Sisältö haetaan [PRH](https://avoindata.prh.fi/index.html):n avoimen datan rajapinnasta. Voit esimerkiksi hakea kaikki televiestinnän yritykset alueelta Helsinki (toimialakoodi = 61 ja
-kotipaikka = Helsinki). [Tutustu demoon](https://yhaku.tikka.dev).
+kotipaikka = Helsinki). [Tutustu demoon](https://yhaku.matvei.xyz).
 
 ## Käyttöohjeet
 
