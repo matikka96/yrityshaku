@@ -32,10 +32,7 @@ export default class App extends Component {
       csv += Object.values(e).join() + "\n";
     });
     var element = document.createElement("a");
-    element.setAttribute(
-      "href",
-      "data:text/plain;charset=utf-8," + encodeURIComponent(csv)
-    );
+    element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(csv));
     element.setAttribute(
       "download",
       `Yritykset${this.state.registeredOffice ? `-${this.state.registeredOffice}` : ""}${
@@ -63,12 +60,7 @@ export default class App extends Component {
 
   // Loading raw data from the API
   loadData = () => {
-    let {
-      baseUrl,
-      streetAddressPostCode,
-      registeredOffice,
-      businessLineCode,
-    } = this.state;
+    let { baseUrl, streetAddressPostCode, registeredOffice, businessLineCode } = this.state;
     let payload = Object.assign({}, this.state.payload);
     if (streetAddressPostCode !== "") {
       payload.streetAddressPostCode = streetAddressPostCode;
@@ -128,7 +120,7 @@ export default class App extends Component {
         <Modal
           show={this.state.showModal}
           onHide={() => this.setState({ showModal: false })}
-          centered
+          dialogClassName="my-2"
         >
           <Modal.Header closeButton>
             <Modal.Title>Kuvaus</Modal.Title>
@@ -137,8 +129,8 @@ export default class App extends Component {
             <strong>Mitä tämä työkalu tekee?</strong>
             <p>
               Työkalun tarkoituksena on hakea yrityksiä ja niiden tietoja toimialan ja
-              maantieteellisen sijainnin perusteella. Hakutulos on ladattavissa CSV tai
-              XLSX formaateissa. Sisältö haetaan{" "}
+              maantieteellisen sijainnin perusteella. Hakutulos on ladattavissa CSV tai XLSX
+              formaateissa. Sisältö haetaan{" "}
               <a
                 href="https://avoindata.prh.fi/index.html"
                 target="_blank"
@@ -149,9 +141,7 @@ export default class App extends Component {
               :n avoimen datan rajapinnasta.
             </p>
             <strong>Käyttöohjeet</strong>
-            <p className="m-0">
-              Haku voidaan suorittaa seuraavia parametreja hyödyntäen:
-            </p>
+            <p className="m-0">Haku voidaan suorittaa seuraavia parametreja hyödyntäen:</p>
             <ul>
               <li>
                 Kotipaikka <span className="ml-2 small">Oltava tarkka vastine!</span>
@@ -180,9 +170,8 @@ export default class App extends Component {
               </li>
             </ul>
             <p>
-              Vähintään yksi parametri on syötettävä, mutta useampaakin voi käyttää
-              samanaikaisesti. Jos parametri(t) on syötetty puutteellisesti, sovellus
-              ilmoittaa asiasta.
+              Vähintään yksi parametri on syötettävä, mutta useampaakin voi käyttää samanaikaisesti.
+              Jos parametri(t) on syötetty puutteellisesti, sovellus ilmoittaa asiasta.
             </p>
             <a href="https://matvei.xyz" target="_blank" rel="noopener noreferrer">
               Suunnittelu ja toteutus
@@ -193,12 +182,13 @@ export default class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              GitHub
             </a>
           </Modal.Body>
         </Modal>
 
-        <div className="d-flex align-items-center justify-content-center min-vh-100 test">
+        {/* min-vh-100 */}
+        <div className="d-flex align-items-center justify-content-center py-3 main-element">
           <div className="card" style={{ width: "30rem" }}>
             <h4 className="card-header">
               Yrityshaku
@@ -339,17 +329,14 @@ export default class App extends Component {
                 className="progress transition-duration"
                 style={{
                   transitionDuration: "0.2s",
-                  height:
-                    this.state.totalResults && this.state.currentResults ? null : "0px",
+                  height: this.state.totalResults && this.state.currentResults ? null : "0px",
                 }}
               >
                 <div
                   className="progress-bar progress-bar-striped progress-bar-animated"
                   role="progressbar"
                   style={{
-                    width: `${
-                      (this.state.currentResults * 100) / this.state.totalResults
-                    }%`,
+                    width: `${(this.state.currentResults * 100) / this.state.totalResults}%`,
                   }}
                 ></div>
               </div>
@@ -388,9 +375,7 @@ export default class App extends Component {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : null}
-                {this.state.loadingData
-                  ? "Valmistellaan tiedostoa"
-                  : "Lataa yritystiedot"}
+                {this.state.loadingData ? "Valmistellaan tiedostoa" : "Lataa yritystiedot"}
               </button>
             </div>
           </div>
